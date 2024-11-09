@@ -1,0 +1,259 @@
+/* style.css */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.seat-availability-container {
+    max-width: 800px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.seat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.seat-header h2 {
+    color: #2a7ade;
+    margin: 0;
+}
+
+.post-info {
+    font-size: 0.9em;
+    color: gray;
+}
+
+.tag {
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    margin-left: 1px;
+}
+
+
+.room-rent {
+    background-color: #f54b5e;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.room-rent:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 105, 135, 0.7),
+                0 0 30px rgba(255, 105, 135, 0.5),
+                0 0 45px rgba(255, 105, 135, 0.3);
+}
+
+.room-rent::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 105, 135, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.room-rent:hover::after {
+    opacity: 1;
+    animation: magic-glow 1.5s infinite ease-in-out;
+}
+
+@keyframes magic-glow {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 105, 135, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 105, 135, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 105, 135, 0.5);
+    }
+}
+
+.location {
+    background-color: #2a7ade;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.location:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(42, 122, 222, 0.7),
+                0 0 30px rgba(42, 122, 222, 0.5),
+                0 0 45px rgba(42, 122, 222, 0.3);
+}
+
+.location::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(42, 122, 222, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.location:hover::after {
+    opacity: 1;
+    animation: location-glow 1.5s infinite ease-in-out;
+}
+
+@keyframes location-glow {
+    0% {
+        box-shadow: 0 0 15px rgba(42, 122, 222, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(42, 122, 222, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(42, 122, 222, 0.5);
+    }
+}
+
+.rating-actions {
+    display: flex;
+    align-items: center;
+}
+
+.rating-score {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.rating-score img {
+    width: 15px;
+    height: auto;
+    margin-left: 5px;
+}
+
+.btn-save, .btn-view {
+    background-color: #f54b5e;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.btn-save {
+    background-color: transparent;
+    border: 1px solid rgb(62, 61, 61);
+    color: #333;
+}
+
+.star-top{
+    color: rgb(240, 240, 58);
+}
+
+
+.about_rent_Seat{
+    width: 1074px;
+    width: 234;
+    display: flex;
+}
+
+.seat-content {
+    display: flex;
+    margin-top: 15px;
+}
+
+
+
+.image-gallery {
+    display: flex;
+    flex: 2;
+    gap: 5px;
+}
+
+.image-placeholder {
+    width: 272px;
+    height: 282px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-size: 1.5em;
+}
+
+.more-images {
+    width: 118px;
+    background-color: #5f5f5f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.more-images-number{
+    z-index: 1000;
+    position: absolute;
+    align-items: center;
+    color: #333;
+}
+.user-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex: 1;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.user-actions button {
+    background: none;
+    border: none;
+    color: #555;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.seat-details {
+    margin-top: 20px;
+}
+
+.seat-details p {
+    font-size: 0.8em;
+    color: gray;
+    margin: 2px 0;
+    text-align: center;
+}
+
+.seat-count {
+    font-size: 2em;
+    margin: 0;
+}
+.seat-count , .seat-rent , .seat-location , .available-date{
+    text-align: center;
+    color: #cc1010;
+}
+
